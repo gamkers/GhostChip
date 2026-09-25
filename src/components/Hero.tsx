@@ -51,7 +51,7 @@ export default function Hero() {
         alignItems: "center",
         justifyContent: "center",
         padding: "0 clamp(16px, 4vw, 60px)",
-        paddingTop: 20,
+        paddingTop: "clamp(100px, 15vh, 140px)",
       }}
     >
       {/* Grid overlay */}
@@ -88,7 +88,7 @@ export default function Hero() {
         flexWrap: "wrap",
         alignItems: "center",
         justifyContent: "center",
-        gap: "clamp(30px, 6vw, 80px)",
+        gap: "clamp(60px, 8vw, 80px)",
         width: "100%",
         maxWidth: 1200,
         zIndex: 10,
