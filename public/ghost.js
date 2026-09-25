@@ -264,8 +264,8 @@ function createEyes() {
   rightEye.position.set(0.7, 0.6, 2.0);
   eyeGroup.add(rightEye);
 
-  // Reduced from 0.525 to 0.38 to shrink the outer eye glow radius
-  const outerGlowGeometry = new THREE.SphereGeometry(0.38, 12, 12);
+  // Increased to 0.55 to expand the outer eye glow radius
+  const outerGlowGeometry = new THREE.SphereGeometry(0.55, 12, 12);
   const glowMatConfig = { color: params.eyeGlowColor, transparent: true, opacity: 0, side: THREE.BackSide };
 
   const leftOuterGlowMaterial = new THREE.MeshBasicMaterial(glowMatConfig);

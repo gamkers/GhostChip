@@ -81,22 +81,6 @@ export default function Hero() {
         <circle cx="1200" cy="450" r="6" fill="none" stroke="#00FF41" strokeWidth="1" opacity="0.6" />
       </svg>
 
-      {/* Eyebrow Badge */}
-      <div ref={eyebrowRef} style={{ textAlign: "center", marginTop: "clamp(10px, 2vh, 40px)", marginBottom: "10px", zIndex: 5 }}>
-        <div style={{
-          display: "inline-flex",
-          alignItems: "center",
-          gap: 12,
-          background: "rgba(0, 255, 65, 0.05)",
-          border: "1px solid rgba(0, 255, 65, 0.2)",
-          padding: "clamp(6px, 2vw, 8px) clamp(12px, 3vw, 20px)",
-          borderRadius: 100,
-          boxShadow: "0 0 20px rgba(0, 255, 65, 0.1)"
-        }}>
-          <span style={{ width: 8, height: 8, background: "var(--gc-green)", borderRadius: "50%", animation: "pulseGlow 2s infinite alternate", flexShrink: 0 }} />
-          <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "clamp(0.55rem, 2.5vw, 0.8rem)", color: "var(--gc-green)", letterSpacing: "0.1em", fontWeight: 600 }}>THE WORLD'S FIRST AI-POWERED BADUSB</span>
-        </div>
-      </div>
 
       {/* Main Hero Lockup: Text (Left) + Terminal (Right) */}
       <div style={{
@@ -150,6 +134,7 @@ export default function Hero() {
 
         {/* Right Side: Product Image */}
         <div className="hero-image-block" style={{
+          position: "relative",
           transform: "rotate(2deg) perspective(1000px) rotateY(-10deg)",
           transformStyle: "preserve-3d",
           transition: "transform 0.4s",
@@ -158,6 +143,27 @@ export default function Hero() {
           onMouseEnter={e => e.currentTarget.style.transform = "rotate(0deg) perspective(1000px) rotateY(0deg) scale(1.05)"}
           onMouseLeave={e => e.currentTarget.style.transform = "rotate(2deg) perspective(1000px) rotateY(-10deg) scale(1)"}
         >
+          {/* Eyebrow Badge Floating Bubble */}
+          <div style={{ position: "absolute", top: "28%", left: 0, width: "100%", display: "flex", justifyContent: "center", zIndex: 20, pointerEvents: "none" }}>
+            <div ref={eyebrowRef} style={{ pointerEvents: "auto" }}>
+              <div style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 10,
+                background: "rgba(0, 255, 65, 0.1)",
+                backdropFilter: "blur(10px)",
+                border: "1px solid rgba(0, 255, 65, 0.3)",
+                padding: "8px 16px",
+                borderRadius: 100,
+                boxShadow: "0 0 20px rgba(0, 255, 65, 0.2)",
+                whiteSpace: "nowrap"
+              }}>
+                <span style={{ width: 6, height: 6, background: "var(--gc-green)", borderRadius: "50%", animation: "pulseGlow 2s infinite alternate", flexShrink: 0 }} />
+                <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.65rem", color: "var(--gc-green)", letterSpacing: "0.1em", fontWeight: 600 }}>THE WORLD'S FIRST AI-POWERED BADUSB</span>
+              </div>
+            </div>
+          </div>
+
           <img 
             src="/ghostchip-device.png" 
             alt="GhostChip Device" 
