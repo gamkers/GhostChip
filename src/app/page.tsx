@@ -9,7 +9,6 @@ import PricingSection from "@/components/PricingSection";
 import FAQSection from "@/components/FAQSection";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
-import Cursor from "@/components/Cursor";
 import FadeIn from "@/components/FadeIn";
 import TypingReveal from "@/components/TypingReveal";
 export default function Home() {
@@ -17,7 +16,6 @@ export default function Home() {
     <>
       <Nav />
       <main style={{ position: "relative", zIndex: 10 }}>
-        <Cursor />
         <Hero />
       
       {/* 01. The Problem / Pitch */}
