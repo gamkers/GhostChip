@@ -89,12 +89,12 @@ export default function Hero() {
           gap: 12,
           background: "rgba(0, 255, 65, 0.05)",
           border: "1px solid rgba(0, 255, 65, 0.2)",
-          padding: "8px 20px",
+          padding: "clamp(6px, 2vw, 8px) clamp(12px, 3vw, 20px)",
           borderRadius: 100,
           boxShadow: "0 0 20px rgba(0, 255, 65, 0.1)"
         }}>
-          <span style={{ width: 8, height: 8, background: "var(--gc-green)", borderRadius: "50%", animation: "pulseGlow 2s infinite alternate" }} />
-          <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.8rem", color: "var(--gc-green)", letterSpacing: "0.1em", fontWeight: 600 }}>THE WORLD'S FIRST AI-POWERED BADUSB</span>
+          <span style={{ width: 8, height: 8, background: "var(--gc-green)", borderRadius: "50%", animation: "pulseGlow 2s infinite alternate", flexShrink: 0 }} />
+          <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "clamp(0.55rem, 2.5vw, 0.8rem)", color: "var(--gc-green)", letterSpacing: "0.1em", fontWeight: 600 }}>THE WORLD'S FIRST AI-POWERED BADUSB</span>
         </div>
       </div>
 
