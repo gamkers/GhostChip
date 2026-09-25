@@ -51,7 +51,7 @@ export default function Hero() {
         alignItems: "center",
         justifyContent: "center",
         padding: "0 clamp(16px, 4vw, 60px)",
-        paddingTop: 80,
+        paddingTop: 20,
       }}
     >
       {/* Grid overlay */}
@@ -82,7 +82,7 @@ export default function Hero() {
       </svg>
 
       {/* Eyebrow Badge */}
-      <div ref={eyebrowRef} style={{ textAlign: "center", marginTop: "clamp(40px, 6vh, 100px)", marginBottom: "clamp(10px, 2vw, 20px)", zIndex: 5 }}>
+      <div ref={eyebrowRef} style={{ textAlign: "center", marginTop: "clamp(10px, 2vh, 40px)", marginBottom: "10px", zIndex: 5 }}>
         <div style={{
           display: "inline-flex",
           alignItems: "center",
@@ -177,7 +177,7 @@ export default function Hero() {
         style={{
           width: "100%",
           overflow: "hidden",
-          marginTop: "clamp(20px, 4vw, 40px)",
+          marginTop: "10px",
           zIndex: 5,
           padding: "20px 0",
           borderTop: "1px solid rgba(255,255,255,0.05)",

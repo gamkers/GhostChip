@@ -51,9 +51,9 @@ composer.addPass(renderPass);
 
 const bloomPass = new UnrealBloomPass(
   new THREE.Vector2(window.innerWidth, window.innerHeight),
-  0.45,  // strength - increased slightly
+  0.25,  // strength - decreased to reduce brightness
   0.4,   // radius
-  0.75   // threshold
+  0.85   // threshold - increased so only the brightest parts glow
 );
 composer.addPass(bloomPass);
 
