@@ -2,8 +2,14 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
-const links = ["Features", "Hardware", "How It Works", "FAQ"];
-
+const links = [
+  { label: "Features", href: "#features" },
+  { label: "Hardware", href: "#hardware" },
+  { label: "How It Works", href: "#how-it-works" },
+  { label: "FAQ", href: "#faq" },
+  { label: "Document", href: "https://ghostui.gamkers.in/documents.html" },
+  { label: "Webapp", href: "https://ghostui.gamkers.in" },
+];
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -60,8 +66,8 @@ export default function Nav() {
         <nav style={{ gap: 40 }} className="hidden md:flex">
           {links.map(l => (
             <a
-              key={l}
-              href={`#${l.toLowerCase().replace(/\s/g, "-")}`}
+              key={l.label}
+              href={l.href}
               style={{
                 fontFamily: "'JetBrains Mono', monospace",
                 fontSize: "0.7rem",
@@ -74,7 +80,7 @@ export default function Nav() {
               onMouseEnter={e => (e.currentTarget.style.color = "var(--gc-white)")}
               onMouseLeave={e => (e.currentTarget.style.color = "var(--gc-muted)")}
             >
-              {l}
+              {l.label}
             </a>
           ))}
         </nav>
@@ -120,8 +126,8 @@ export default function Nav() {
         }}>
           {links.map(l => (
             <a
-              key={l}
-              href={`#${l.toLowerCase().replace(/\s/g, "-")}`}
+              key={l.label}
+              href={l.href}
               onClick={() => setOpen(false)}
               style={{
                 fontFamily: "'JetBrains Mono', monospace",
@@ -134,7 +140,7 @@ export default function Nav() {
                 padding: "10px 0"
               }}
             >
-              {l}
+              {l.label}
             </a>
           ))}
           <a href="#pricing" onClick={() => setOpen(false)} className="btn-primary" style={{ fontSize: "0.75rem", justifyContent: "center", marginTop: 10 }}>
